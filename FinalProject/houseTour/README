@@ -1,0 +1,63 @@
+ttProject - 3D Village and House Tour
+
+Pallavi Madasu
+CSCI 5229 - Summer 2016
+
+
+Steps to do the navigation
+---------------------------
+1) Running the 'final' file will launch the application in perspective mode. Press 'n/N' to go to navigation mode.
+   Use the below keys to navigate.
+	a) Left/Right Arrows to navigate left and right.
+	b) Up and Down Arrows to navigate forward and backward.
+	c) Pageup/PageDown to climb up/down stairs in the house.
+2) Do the house tour in the main house after opening the gate (Click 'g'), Navigate through the hall, dining and bed rooms.
+3) Climb the stairs and visit the bed room in the pent house.
+4) Collision detection is applied to the compound wall and the walls of the main house to restrict the user from penetrating
+   into the wall.
+5) Take a walk around and visit play area.
+6) Lighting can be turned on in the scene
+
+House has : couch, dining table, bed, bed lamp, stairs, fan, wallclock, swimming pool, Lights
+Play area : tennis court, swing, seesaw, table & chairs
+Village : Houses, Play area, Trees, Windmills, Street Lights
+
+Key bindings:
+---------------
+ESC     			Exit
+0       			Reset view angle
++/-  				Zoom In/Out (Decrease/Increase Field of View)
+b/B					Top view of the scene - First Person Navigation Mode
+j/J					Hall view - First Person Navigation Mode
+i/I					Bed room view - First Person Navigation Mode
+k/K					Pent House View - First Person Navigation Mode
+r/R					Picnic View - First Person Navigation Mode
+u/U					Toggle axes
+o/O 				Orthogonal Mode
+p/P 				Perspective Mode
+n/N					First Person Navigation Mode
+l/L         		Toggle lighting
+a/A        			Decrease/Increase ambient light
+d/D        			Decrease/Increase diffuse light
+s/S        			Decrease/Increase specular light
+e/E        			Decrease/Increase emitted light
+h/H        			Decrease/Increase shininess
+m/M          		Play/Pause light movement
+f/F					Switch on/off fans
+g/G 				Open/Close main gate
+v/V					Increase/Decrease waves in swimming pool
+w/W					Play seesaw
+x/X					Move eye position left/right 
+y/Y					Move eye position up/down 
+z/Z					Move eye position forward/backward
+t/T					Decrease/Increase camera's azimuth angle
+c/C					Decrease/Increase camera's elevation angle
+<>					Increase/Decrease light Azimuth angle
+[]         			Lower/rise light
+Up/Down arrows   	Increase/Decrease elevation angle (Move Forward/Backward in First Person Navigation Mode)
+Left/Right arrows	Increase/Decrease Azimuth angle (Move Left/Right in First Person Navigation Mode)
+PageUp/PageDown		Climb up/down stairs in First Person Navigation Mode
+F1/F2				Zoom In/Zoom Out the scene
+F3/F4				Increase/Decrease azimuth angle
+F5/F6				Increase/Decrease elevation angle
+

@@ -1,0 +1,38 @@
+Quick openGL: 
+
+open terminal with MINGW64
+
+
+cd ~
+cd /c/Users/julia/OneDrive/CSCI_4229_Graphics
+
+
+gcc file.cpp -o file
+./file
+
+OR if make file then
+
+ make
+./file
+
+
+
+ex:
+
+julia@DESKTOP-13L92AI MINGW64 /c/Users/julia/OneDrive
+$ cd CSCI_4229_Graphics
+
+julia@DESKTOP-13L92AI MINGW64 /c/Users/julia/OneDrive/CSCI_4229_Graphics
+$ cd HW1_gears
+
+julia@DESKTOP-13L92AI MINGW64 /c/Users/julia/OneDrive/CSCI_4229_Graphics/HW1_gears
+$ ls
+Makefile  README  gears.c
+
+julia@DESKTOP-13L92AI MINGW64 /c/Users/julia/OneDrive/CSCI_4229_Graphics/HW1_gears
+$ make
+gcc -O3 -Wall -DUSEGLEW -o gears gears.c   -lfreeglut -lglew32 -lglu32 -lopengl32
+....
+
+julia@DESKTOP-13L92AI MINGW64 /c/Users/julia/OneDrive/CSCI_4229_Graphics/HW1_gears
+$ ./gears

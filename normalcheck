@@ -1,0 +1,84 @@
+#!/usr/bin/perl -w
+use strict;
+use Math::Trig;
+
+(@ARGV>0) || die "Usage: $0 x0,y0,z0    x1,y1,z1    x2,y2,z2   [Nx,Ny,Nz]\n";
+
+#  Join all arguments
+my $arg = join(' ',@ARGV);
+#  Get rid of whitespace around ,
+$arg =~ s/\s*,\s*/,/g;
+#  Add a space at the end to match trailing whitespace
+$arg .= ' ';
+
+#
+#  Extract (x,y,z)
+#
+sub getxyz
+{
+   my ($what) = @_;
+   ($arg =~ s/^\s*(\S+?),(\S+?),(\S+?)\s+//) || die "Cannot match x,y,z for $what from $arg\n";
+   warn "$what = $1,$2,$3\n";
+   return ($1,$2,$3);
+}
+
+#  Get three points
+my ($x0,$y0,$z0) = getxyz('Point 0');
+my ($x1,$y1,$z1) = getxyz('Point 1');
+my ($x2,$y2,$z2) = getxyz('Point 2');
+
+#  Compute differences
+my $dx1 = $x1-$x0;
+my $dy1 = $y1-$y0;
+my $dz1 = $z1-$z0;
+
+my $dx2 = $x2-$x0;
+my $dy2 = $y2-$y0;
+my $dz2 = $z2-$z0;
+
+#  Compute cross product
+my $X = $dy1*$dz2-$dy2*$dz1;
+my $Y = $dx2*$dz1-$dx1*$dz2;
+my $Z = $dx1*$dy2-$dx2*$dy1;
+my $L = sqrt($X*$X+$Y*$Y+$Z*$Z);
+$L || die "Cross product is zero\n";
+
+#  Normalize
+$X /= $L;
+$Y /= $L;
+$Z /= $L;
+
+#  Show normal if no normal is provided
+if (!$arg)
+{
+   printf "Normal = %.3f %.3f %.3f\n" , $X , $Y , $Z;
+}
+else
+{
+   #  Get normal
+   my ($Nx,$Ny,$Nz) = getxyz('normal');
+   #  Normalize
+   my $Ln = sqrt($Nx*$Nx+$Ny*$Ny+$Nz*$Nz);
+   $Ln || die "Normal has zero length\n";
+   $Nx /= $Ln;
+   $Ny /= $Ln;
+   $Nz /= $Ln;
+   #  Compute angle between calculated and provided normals
+   my $cos = $Nx*$X + $Ny*$Y + $Nz*$Z;
+   my $ang = 180/3.1415927*Math::Trig::acos($cos);
+   #  Close enough (could be not enough decimal places)
+   if (abs($ang)<5)
+   {
+      print "Normal is correct\n";
+   }
+   #  Vertex order may be reversed
+   elsif (abs($ang)>175)
+   {
+      print "Normal is INVERTED\n";
+   }
+   #  Wrong
+   else
+   {
+      printf "Normal is INCORRECT by %.1f degrees\n" , $ang;
+   }
+}

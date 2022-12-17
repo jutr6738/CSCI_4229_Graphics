@@ -1,1 +1,1 @@
-"# CSCI_4229_Graphics" 
+CSCI_4229_Graphics Fall 2022

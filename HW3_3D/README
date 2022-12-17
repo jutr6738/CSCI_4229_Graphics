@@ -1,0 +1,22 @@
+## 3D Modeling: Cacti World
+
+Julia Troni 
+CSCI 4229 Graphics
+Homework 3:3D Modeling
+
+### Compile and execute
+$ make
+$ ./hw3
+Then the window opens up and shows the 3D scene with multiple cacti, bush trees, a sun, a car, and a pine tree.
+
+#### Commands to interact with the program: 
+- arrows Change view angle (left/right arrows rotates about the y axis up/down arrows rotates about the x axis)
+- 0      Reset view angle to 0,0,0 
+- m changes the mode from orthagonal to perspective projection
+- ESC closes the window and terminates the program
+
+* I worked on my original submission for well over 25 hours and then this new version for 15 hours over the weekend.
+* I was unable to make the corrections that were commented on my submission. I was super frusturated with rewriting my room scene and I realized how unscalable it was becasue I had hard coded all of the vertices. As a result I completely scratched that scene and restarted with something that I will like to eventually turn into a mario cart type game. I plan to iterate on this for future assignments
+* Borrows heavily ex8 and basic shape drawing functions from my previous attempt
+* This site helped me significantly https://www.glprogramming.com/red/chapter02.html
+* I also used http://www.rgbtool.com/ for choosing colors

@@ -1,0 +1,61 @@
+﻿Julia Troni
+CSCI 4229: Undergraduate Graphics
+Fall 2022
+
+
+Project Final
+For my final project I created a scene of my “dream property” which consists of a large neat and private outdoor area with all sorts of fun and a big barn house
+Collision decection is implemented in first person for the fence 
+___________________________________
+Steps to run
+___________________________________
+ make
+./final
+
+
+~~~~~~~~~MODES: ~~~~~~~~~~~~~~~~
+o/O 				Orthogonal Mode
+p/P 				Perspective Mode
+n/N					First Person Navigation Mode
+
+~~~~~~~NAVIGATION/VIEW: ~~~~~~~~~~~~~~~
+w/W					Walk forward in first person
+s/S					Walk backward in first person
+a/A					Walk forward in first person
+d/D					Walk forward in first person
+Up/Down arrows   	Increase/Decrease elevation angle (Move Forward/Backward in First Person Navigation Mode)
+Left/Right arrows	Increase/Decrease Azimuth angle (Move Left/Right in First Person Navigation Mode)
+
+x/X					Move eye position left/right 
+y/Y					Move eye position up/down 
+z/Z					Move eye position forward/backward
+
+t/T					Decrease/Increase camera's azimuth angle
+c/C					Decrease/Increase camera's elevation
++/-  				Zoom In/Out (Decrease/Increase Field of View)
+0       			Reset view angle
+b/B					Birds Eye View/ Top view of the scene - First Person Navigation Mode
+
+
+
+~~~~~~~~~~~ANIMATION: ~~~~~~~~~~~~~~~~
+g/G 				Open/Close  gate
+v/V					Increase/Decrease waves in swimming pool
+u/u					Show or hide axes
+
+
+~~~~~~~~~LIGHTING: ~~~~~~~~~~~~~~~~
+l/L         		Toggle lighting on off
+m/M          		Play/Pause light movement
+<>					Increase/Decrease light Azimuth angle
+[]         			Lower/rise light
+i/I        			Decrease/Increase ambient light
+f/F        			Decrease/Increase diffuse light
+k/K       			Decrease/Increase specular light
+j/J        			Decrease/Increase emitted light
+h/H        			Decrease/Increase shininess
+
+
+ESC     			Exit
+
+
